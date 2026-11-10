@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EC Soccer Trials | Player registration 2027</title>
+  <meta name="description" content="Register for the 2027 soccer trials. Players aged 14 to 19. Gallery, upcoming tournaments and team history.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#home"><span class="brand-dot"></span>ec soccer trials</a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#tournaments">Upcoming tournaments</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#history">Team history</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-lime btn-sm js-register" type="button">Player registration</button>
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <img class="hero-img" src="images/hero.jpg" alt="Player in a white kit looking up and shouting" width="736" height="1104">
+
+      <div class="hero-content">
+        <p class="badge">Registration open <span id="days-left"></span></p>
+        <h1>Your next level starts on <em>trial day.</em></h1>
+        <p class="lead">Register once, get seen by coaches and local scouts, and receive written feedback on your game.</p>
+
+        <div class="cta-pill">
+          <span>Open to players aged 14 to 19</span>
+          <button class="btn btn-lime js-register" type="button">Player registration</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INTRO ========== -->
+    <section class="intro">
+      <h2>For players who want to be seen, <em>every season.</em></h2>
+      <p>Trial days run by qualified coaches, scouted by local clubs, and open to every province. Show up, play your position and take home a feedback report.</p>
+
+      <ul class="pills">
+        <li class="pill is-active">Coaching</li>
+        <li class="pill">Scouting</li>
+        <li class="pill">Feedback</li>
+      </ul>
+    </section>
+
+    <!-- ========== UPCOMING TOURNAMENTS ========== -->
+    <section class="section" id="tournaments">
+      <div class="section-head">
+        <h2>Upcoming <em>tournaments</em></h2>
+        <p>Pick your age group to see where you can play next.</p>
+      </div>
+
+      <!-- Filter buttons: script.js shows or hides cards using data-age -->
+      <div class="filters" role="group" aria-label="Filter by age group">
+        <button class="filter is-active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="u15" type="button">Under 15</button>
+        <button class="filter" data-filter="u17" type="button">Under 17</button>
+        <button class="filter" data-filter="u19" type="button">Under 19</button>
+      </div>
+
+      <!-- PLACEHOLDER events: replace names, dates and venues with your real ones -->
+      <div class="tournament-grid">
+        <article class="t-card" data-age="u15">
+          <time class="t-date" datetime="2027-01-23"><strong>23</strong> Jan 2027</time>
+          <h3>Summer Cup</h3>
+          <p>Under 15 &middot; Nelson Mandela Bay</p>
+          <span class="tag">Registration open</span>
+        </article>
+        <article class="t-card" data-age="u17">
+          <time class="t-date" datetime="2027-02-06"><strong>06</strong> Feb 2027</time>
+          <h3>Coastal Challenge</h3>
+          <p>Under 17 &middot; Buffalo City</p>
+          <span class="tag">Registration open</span>
+        </article>
+        <article class="t-card" data-age="u19">
+          <time class="t-date" datetime="2027-02-20"><strong>20</strong> Feb 2027</time>
+          <h3>Premier Trials Day</h3>
+          <p>Under 19 &middot; Johannesburg</p>
+          <span class="tag">Registration open</span>
+        </article>
+        <article class="t-card" data-age="u15">
+          <time class="t-date" datetime="2027-03-06"><strong>06</strong> Mar 2027</time>
+          <h3>Future Stars Festival</h3>
+          <p>Under 15 &middot; Mangaung</p>
+          <span class="tag tag-soon">Opens soon</span>
+        </article>
+        <article class="t-card" data-age="u17">
+          <time class="t-date" datetime="2027-03-20"><strong>20</strong> Mar 2027</time>
+          <h3>Inter-Province Showcase</h3>
+          <p>Under 17 &middot; Tshwane</p>
+          <span class="tag tag-soon">Opens soon</span>
+        </article>
+        <article class="t-card" data-age="u19">
+          <time class="t-date" datetime="2027-04-10"><strong>10</strong> Apr 2027</time>
+          <h3>National Selection Day</h3>
+          <p>Under 19 &middot; Ethekwini</p>
+          <span class="tag tag-soon">Opens soon</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="section section-alt" id="gallery">
+      <div class="section-head">
+        <h2>Match day <em>gallery</em></h2>
+        <p>Moments from trial days, training sessions and tournaments.</p>
+      </div>
+
+      <!-- Swap each placeholder for: <img src="images/your-photo.jpg" alt="describe the photo"> -->
+      <div class="gallery">
+        <figure class="tile tile-big"><img src="images/hero.jpg" alt="Player celebrating in a white kit"></figure>
+        <figure class="tile t1"><figcaption><img src="images/lfc.jpg" alt="Team Photo"></figcaption></figure>
+        <figure class="tile t2"><figcaption><img src="images/fotball.jpg" alt="Team Photo"></figcaption></figure>
+        <figure class="tile t3"><figcaption><img src="images/training.jpg" alt="Team Photo"></figcaption></figure>
+        <figure class="tile t4"><figcaption>Add photo</figcaption></figure>
+        <figure class="tile t5"><figcaption>Add photo</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ========== TEAM HISTORY ========== -->
+    <section class="section" id="history">
+      <div class="section-head">
+        <h2>Football team <em>history</em></h2>
+        <p>How the trials grew from one pitch to a province-wide programme.</p>
+      </div>
+
+      <!-- PLACEHOLDER milestones: replace with your real story -->
+      <ol class="timeline">
+        <li><span class="year">2018</span><h3>The first trial day</h3><p>Forty players, one pitch and two volunteer coaches.</p></li>
+        <li><span class="year">2020</span><h3>Training goes regional</h3><p>Weekly sessions begin in three districts.</p></li>
+        <li><span class="year">2023</span><h3>Scouting partnerships</h3><p>Local clubs join trial days to scout players.</p></li>
+        <li><span class="year">2027</span><h3>Nine provinces</h3><p>Trial centres open across the country.</p></li>
+      </ol>
+    </section>
+
+    <!-- ========== REGISTRATION CTA ========== -->
+    <section class="section section-cta" id="register">
+      <h2>Ready for <em>trial day?</em></h2>
+      <ol class="how">
+        <li><strong>1</strong> Complete the player registration form.</li>
+        <li><strong>2</strong> Check your inbox for your confirmation email.</li>
+        <li><strong>3</strong> Arrive on trial day with your documents.</li>
+      </ol>
+      <button class="btn btn-lime btn-lg js-register" type="button">Player registration</button>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div>
+        <h3>EC Soccer Trials</h3>
+        <p>Practice project for a portfolio.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="#tournaments">Upcoming tournaments</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#history">Team history</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:admin@example.com">admin@example.com</a>
+      </div>
+    </div>
+    <p class="big-type" aria-hidden="true">Trials 2027</p>
+    <p class="copy">&copy; <span id="year">2026</span> EC Soccer Trials</p>
+  </footer>
+
+  <!-- ========== REGISTRATION POP-UP (Google Form goes in here) ========== -->
+  <dialog id="register-dialog" aria-labelledby="register-title">
+    <div class="dialog-head">
+      <h2 id="register-title">Player registration</h2>
+      <button class="icon-btn" id="close-dialog" type="button" aria-label="Close registration form">&times;</button>
+    </div>
+    <div id="dialog-body"></div>
+    <a class="dialog-link" id="open-new-tab" href="#" target="_blank" rel="noopener" hidden>Open the form in a new tab</a>
+  </dialog>
+
+</body>
+</html>
